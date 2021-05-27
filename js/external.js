@@ -38,13 +38,17 @@ var offerExp = confirm('Is the offer still valid?');
 alert('You can get the discount' +((offerExp) && (premium || (numberOfItems > 2))));
 
 
+var username = 'codeup';
+var password = 'notastrongpassword';
 
+var passwordIsFiveCharacters = password.length >=5;
+var passwordDoesNotContainUsername = !password.includes(username);
+var usernameLessThan20Characters = username.length <= 20;
+var containsNoWhitespace = password === password.trim() && username === username.trim();
 
-
-
-
-
-
-
+console.log(passwordIsFiveCharacters);
+console.log(passwordDoesNotContainUsername);
+console.log(usernameLessThan20Characters);
+console.log(containsNoWhitespace);
 
 
