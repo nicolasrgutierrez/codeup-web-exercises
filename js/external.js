@@ -35,7 +35,11 @@ alert('You can enroll in the class: ' + (full && !conflict));
 var premium = confirm('Are you a Premium member?');
 var numberOfItems = Number(prompt('How many items are you purchasing?'));
 var offerExp = confirm('Is the offer still valid?');
-alert('You can get the discount');
+alert('You can get the discount' +((offerExp) && (premium || (numberOfItems > 2))));
+
+
+
+
 
 
 
