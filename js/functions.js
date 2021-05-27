@@ -54,10 +54,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 function isTwo(random){
-    return
-}
+    if (random === 2){
+        return true;
+    } else {
+        return false;
+    }
+};
 
-
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -73,7 +77,9 @@ function isTwo(random){
 function calculateTip (num1, num2) {
     return num1 * num2; //num1 = percentage, num2 = total bill
 }
-console.log(calculateTip(num1: .20, num2: 43.57).toFixed(2))
+console.log(calculateTip(.20,  20).toFixed(2));
+
+
 
 /**
  * TODO:
@@ -81,7 +87,8 @@ console.log(calculateTip(num1: .20, num2: 43.57).toFixed(2))
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
+alert('would you like to leave a tip?');
+prompt("20% = " + calculateTip(.20, 20));
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -100,4 +107,4 @@ function applyDiscount(num1, num2) {
     return num1 - (num2 * num1);
 }
 
-console.log("Final result" + (applyDiscount(num1: 45.99, num2: .2)))
+console.log("Final result" + (applyDiscount(45.99,.2)));
