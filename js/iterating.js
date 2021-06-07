@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ['Nick', 'Miranda', 'Karrlee', 'Evander'];
+    let names = ['Nick', 'Miranda', 'Karrlee', 'Evander'];
     console.log(names);
 
     /**
@@ -30,7 +30,7 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-    for (var i = 0; i < names.length; i++) {
+    for (let i = 0; i < names.length; i++) {
         console.log('The name at index ' + i + ' is: ' + names[i]);
     }
     /**
@@ -41,7 +41,7 @@
         console.log('Here is the really cool name ' + name + '!');
     });
     /**
-     * TODO:
+     *
      * Create the following three functions, each will accept an array and
      * return an an element from it
      * - first: returns the first item in the array
@@ -55,8 +55,19 @@
      */
 var numbers = [1, 2, 3, 4, 5];
 
+    function first(array) {
+    return array[0];
+}
 
+    function second(array) {
+    return array[1];
+}
 
-
+    function last(array) {
+    return array[array.length - 1];
+}
+    console.log(first(numbers));
+    console.log(second(numbers));
+    console.log(last(numbers));
 
 })();
