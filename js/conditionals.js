@@ -142,7 +142,7 @@ console.log(calculateTotal(5, 100));
 
 
 /**
- * TODO:
+ *
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
