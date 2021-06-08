@@ -13,7 +13,7 @@
      console.log(planetsArray);
 
     /**
-     * TODO:
+     *
      * Create a string with <br> tags between each planet. console.log() your
      * results. Why might this be useful?
      *
@@ -25,9 +25,9 @@
     var planetBreak = planetsArray.join(' <br> ');
     console.log(planetBreak);
 
-
-
-
+    var planetStringTwo = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>"
+    document.write(planetStringTwo);
+    console.log(planetStringTwo);
 
 
 })();
