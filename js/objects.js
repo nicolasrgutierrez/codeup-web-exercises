@@ -76,6 +76,7 @@ const person = {
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    /*
 const books = [
         {author: {firstname: 'Shea ', lastname: 'Serrano'}, title: 'Basketball (and Other Things)', bookNumber: '1'},
         {author: {firstname: 'Shea ', lastname: 'Serrano'}, title: 'Movies (and Other Things)', bookNumber: '2'},
@@ -83,6 +84,16 @@ const books = [
         {author: {firstname: 'James ', lastname: 'Dashner'}, title: 'The Maze Runner', bookNumber: '4' },
         {author: {firstname: 'Ransom ', lastname: 'Riggs'}, title: "Miss Peregrine's Home for Peculiar Children", bookNumber: '5'},
     ]; console.log(books[0].title);
+*/
+   let books = [];
+    books.push(createBook("Basketball (and Other Things)", "Shea Serrano"));
+    books.push(createBook("Movies (and Other Things)", "Shea Serrano"))
+    books.push(createBook("The Hunger Games", "Suzanne Collins"));
+    books.push(createBook("The Maze Runner", "James Dashner"));
+    books.push(createBook("Miss Peregrine's Home for Peculiar Children", "Ransom Riggs"));
+
+
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -107,9 +118,9 @@ const books = [
      *      ---
      *      ...
      */
-    books.forEach(function(book){
-        console.log("Book No: " + book.bookNumber + "\n" + "Title: " + book.title + "\n" + "Author: " + book.author.firstname + book.author.lastname)  ;
-    })
+    books.forEach(function(books, index){
+        showBookInfo(books, index);
+    });
 
 
     /**
@@ -122,5 +133,26 @@ const books = [
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author) {
+        let name = author.split(" ")
+        let firstName = name[0];
+        let lastName = name[1];
+        return {
+            title : title,
+            author : {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+    console.log(createBook("The Rap Year Book", "Shea Serrano" ));
+
+function showBookInfo(book, index) {
+    console.log("book #", index + 1);
+    console.log("Title: " +book.title);
+    console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    console.log("---");
+}
 
 })();
