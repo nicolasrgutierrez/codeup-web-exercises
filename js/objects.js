@@ -95,7 +95,7 @@ const books = [
 
 
     /**
-     * TODO:
+     *
      * Loop through the books array and output the following information about
      * each book:
      * - the book number (use the index of the book in the array)
