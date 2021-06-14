@@ -7,37 +7,42 @@
 <body>
 <h1>Register With Us!</h1>
     <form method="POST" action="https://request-inspector.glitch.me/">
-        <p>
+
             <label for="email">Email</label>
             <input type="text" name="email" id="email" placeholder="Email address"><br>
-        </p>
-        <p>
+
+            <br>
+
             <label for="password">Password</label>
-            <input type="text" name="password" id="password" placeholder="Password"><br>
-        </p>
-        <p>
-            <label for="bio">Bio</label>
-            <textarea id="bio" type="text" placeholder="Tell us more about you:"></textarea>
-        </p>
+            <input type="password" name="password" id="password" placeholder="Password"><br>
 
-        <p>How did you hear about us?</p>
+            <br>
 
-            <input type="radio" name="how_did_you_hear_about_us" value="a">Billboard<br>
-            <input type="radio" name="how_did_you_hear_about_us" value="b">Radio Advertisement<br>
-            <input type="radio" name="how_did_you_hear_about_us" value="c">Internet Advertisement<br>
-            <input type="radio" name="how_did_you_hear_about_us" value="d">Other<br>
+            <textarea name="Bio">This is my bio!</textarea>
 
-        <p>What web browser are you using?</p>
+            <br>
 
-            <select name="user_browser">
-                <option value="chrome">Google Chrome</option>
-                <option value="safari">Safari</option>
-                <option value="explorer">Internet Explorer</option>
-                <option value="firefox">Firefox</option>
-                <option value="edge">Microsoft Edge</option>
-            </select>
+        <section>
 
-      <button type="submit">Submit</button>
+            <h3>How did you hear about us?</h3>
+
+                <input type="radio" name="how_did_you_hear_about_us" value="billboard">Billboard<br>
+                <input type="radio" name="how_did_you_hear_about_us" value="radio ad">Radio Advertisement<br>
+                <input type="radio" name="how_did_you_hear_about_us" value="internet ad">Internet Advertisement<br>
+                <input type="radio" name="how_did_you_hear_about_us" value="other">Other<br>
+
+        </section>
+
+            <p>What web browser are you using?</p>
+
+                <select name="user_browser">
+                    <option value="chrome">Google Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="explorer">Internet Explorer</option>
+                    <option value="firefox">Firefox</option>
+                    <option value="edge">Microsoft Edge</option>
+                </select>
+      <button type="submit">Register</button>
     </form>
 </body>
 </html>
