@@ -1,5 +1,37 @@
-
+/*
+This page is linked to welcome.html
+ */
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+
+h1, h2 {
+    color: black;
+    text-decoration: underline;
+}
+
+body {
+    background-color: darkgrey;
+    background-image: url("../images/color.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    font-family: AppleMyungjo;
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+td, tr{
+    padding: 10px;
+    font-size: 1em
+}
+
+a:hover {
+    font-size: 2em;
+    transition: 500ms;
 }
