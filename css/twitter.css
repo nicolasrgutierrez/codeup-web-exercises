@@ -52,39 +52,46 @@ a {
     top: 240px;
 }
 .profile {float: outside;
-    height: 80px;
     background: var(--light-bg);
     line-height: 80px;
 }
 .profile-details{
-    width: 25%;
+    margin-top: 2em;
+    float: left;
+    width: calc(25% - 1em);
     margin-left: .5em;
     margin-right: .5em;
 }
 .timeline{
-    width: 50%;
+    margin-top: 2em;
+    float: left;
+    width: calc(50% - 1em);
     margin-left: .5em;
     margin-right: .5em;
 }
 .who-to-follow{
-    width: 25%;
+    margin-top: 2em;
+    width: calc(25% - 1em);
     margin-left: .5em;
     margin-right: .5em;
     float: right;
 }
 .media {
-    width: 100%;
-    background-color: var(--light-bg);
-    border-bottom: 1px gray;
+    --light-bg: white;
+    width: calc(100% - 50px);
+    background-color: whitesmoke;
+    border-bottom: .1em solid #bbb;
     padding: .5em;
+    overflow: auto;
 }
 .media-image{
+    float: left;
     width: 50px;
     margin-top: 1.33em;
 }
 .media-body{
-    width: calc(100% - 50px);
-    clear: left
+    width: 100%;
+    float: none;
 }
 .btn {
     border: 1px solid var(--main-link-color);
