@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #848487;
+    font-weight: bold;
+}
+
+.Links {
+    display: flex;
+    align-self: center;
+}
+
+.firstLink > a{
+    padding: 0 5px;
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.firstLink > a:hover {
+    padding: 0 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
