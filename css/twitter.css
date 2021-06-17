@@ -53,7 +53,10 @@ a {
 }
 .profile {float: outside;
     background: var(--light-bg);
+}
+.profile-form {
     line-height: 80px;
+
 }
 .profile-details{
     margin-top: 2em;
