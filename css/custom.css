@@ -1,0 +1,19 @@
+.jumbotron {
+    background-image: url('../images/pizza.png');
+    text-align: center;
+}
+h1.display-4 {
+    background-color: white;
+    margin: 0;
+    opacity: 70%;
+}
+
+.pizza-container {
+    margin: 0;
+}
+
+.badge-secondary {
+    margin-right: 5px;
+    font-size: 65%;
+}
+
