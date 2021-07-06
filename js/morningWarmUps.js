@@ -14,13 +14,18 @@ function countSpaces(str) {
 //  Create a function named capitalizeAllNames that accepts an array of strings and returns the array with all of its elements capitalized.
 // Example:  capitalizeAllNames(["bob","Seth","TOFU","Toyota"]) ---- returns ----> ["BOB","SETH","TOFU","TOYOTA"]
 //Use a for or for each loop
-function capitalizeAllNames(stringArray) {
-    stringArray = ["bob","Seth","TOFU","Toyota"];
-    for (let i = 0; i < stringArray.length; i++) {
-        stringArray[i] = stringArray[i].toUpperCase();
+function capitalizeAllNames() {
+    let names = ["bob","Seth","TOFU","Toyota"];
+
+    let capitalizedNames = [];
+    for (let i = 0; i < names.length; i++) {
+        capitalizedNames[i] = names[i].toUpperCase();
     }
-    console.log(capitalizeAllNames(stringArray))
+
+    console.log(capitalizedNames);
 }
+    console.log(capitalizeAllNames());
+
 //  Create a function named capitalizeFirstLetter that accepts an array of strings and returns the array with all of the first letters in
 //  each string being capitalized while having the rest of the string lowercase look at the example below for reference.
 
