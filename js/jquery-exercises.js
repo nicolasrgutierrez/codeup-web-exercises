@@ -38,11 +38,31 @@ $(document).ready(function() {
     var contents = $('h1').html();
     alert(contents);
 }) */
-
+/*
 $(document).ready(function() {
 
     $('div').removeClass('codeup')
 
     $('.codeup, .list, .iCanExplain').css('background-color', '#D80000')
 
-});
+}); */
+
+$(document).ready(function() {
+
+    $('h1').click(function() {
+        $(this).css('background-color', '#FF0000')
+    });
+
+    $('p').dblclick(function() {
+        $(this).css('font-size', '18px')
+    });
+
+    $('li').hover(
+        function() {
+            $(this).css('color', '#FF0000');
+        },
+        function() {
+            $(this).css('color', '#000000');
+        }
+    );
+})
