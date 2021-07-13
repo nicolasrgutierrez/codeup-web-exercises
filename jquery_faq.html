@@ -38,8 +38,37 @@
 
 <button class="appear">Answers</button>
 
+<h3>Yellowstone</h3>
+<ul>
+    <li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode Island and Delaware combined.</li>
+    <li>Yellowstone is home to more than 500 active geysers.</li>
+    <li>Yellowstone is home to the largest concentration of mammals in the lower 48 states (67 species).
+    </li>
+    <li>There are approximately 1,000 miles of hiking trails in Yellowstone.</li>
+</ul>
+
+<h3>Sequoia</h3>
+<ul>
+    <li>The park was established in 1890 to protect groves of big trees, or giant sequoias.</li>
+    <li>The largest big tree in the park is known as the General Sherman tree and is thought to be 2,300 to 2,700 years old.</li>
+    <li>Sequoia National Park is one of the eight national parks in California.</li>
+    <li>Sequoia National Park has about 1.3 million visitors per year.</li>
+</ul>
+
+<h3>Yosemite</h3>
+<ul>
+    <li>The park’s diverse landscape supports more than 400 species.</li>
+    <li>Yosemite is home to one of the tallest waterfalls in the world which stands at 2,425 feet.</li>
+    <li>Yosemite is one of the few places in the U.S. where you can see a rainbow at night.</li>
+    <li>Yosemite is the only national park to bid to host the winter Olympics.</li>
+</ul>
+
+<button class="highlight">color</button>
+
 <script src="./js/jquery.js"></script>
 <script>
+    "use strict";
+
     $(document).ready(function() {
 
         $('dd').addClass('invisible')
@@ -50,6 +79,21 @@
 
         $('dt').click(function () {
             $(this).css('background-color', '#6CF253')
+        })
+    });
+</script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $('.highlight').click( function() {
+            $('ul').find('li:last').css({'background-color': '#FF0'});
+        })
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight', 'bold');
+        })
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue')
         })
     });
 </script>
