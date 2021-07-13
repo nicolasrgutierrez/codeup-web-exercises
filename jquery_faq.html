@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+
+<h1>National Park FAQs:</h1>
+
+<dl>
+    <dt>Question # 1: How old is the first national park?</dt>
+    <dd class="invisible">149 Years!</dd>
+    <dt>Question # 2: What is the largest national park site?</dt>
+    <dd class="invisible"> Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</dd>
+    <dt>Question # 3: Roughly how many people have visited national parks?</dt>
+    <dd class="invisible">Nearly 330 million!</dd>
+    <dt>Question # 4: What national park was visited most in 2020?</dt>
+    <dd class="invisible">Great Smoky Mountains National Park</dd>
+    <dt>Question # 5: What are concessions?</dt>
+    <dd class="invisible">Concessioners provide park visitors with lodging, transportation, food services, shops, guiding, and other services.</dd>
+    <dt>Question # 6: Can I bring my pet to a national park?</dt>
+    <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.</dd>
+    <dt>Question # 7: How many states does Yellowstone cover?</dt>
+    <dd class="invisible">Yellowstone covers three states total: Wyoming, Montana, and Idaho </dd>
+    <dt>Question # 8: When was the last Yellowstone eruption?</dt>
+    <dd class="invisible">approximately 630,000 years ago</dd>
+    <dt>Question # 9: How many people have gone missing in national parks?</dt>
+    <dd class="invisible">But there is a darker side to this unspoiled and stunning wilderness—the fact that since the National Park Service was set up in 1916, over 1,000 Americans have vanished without a trace on its grounds.</dd>
+    <dt>Question # 10: How many people have been killed in national parks?</dt>
+    <dd class="invisible">Since 2010, more than a thousand people have died from misadventure at U.S. National Parks.</dd>
+</dl>
+
+<button class="appear">Answers</button>
+
+<script src="./js/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('dd').addClass('invisible')
+
+        $('.appear').click(function() {
+            $('dd').toggleClass('invisible')
+        });
+    });
+</script>
+</body>
+</html>
