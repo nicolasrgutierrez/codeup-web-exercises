@@ -86,12 +86,19 @@
     "use strict";
 
     $(document).ready(function() {
+
+        //$('ul').each(function() {
+        // $(this).children().last().css('background-color','yellow');
+        // });
+
         $('.highlight').click( function() {
             $('ul').find('li:last').css({'background-color': '#FF0'});
         })
+
         $('h3').click(function () {
             $(this).next().children().css('font-weight', 'bold');
         })
+
         $('li').click(function () {
             $(this).parent().children().first().css('color', 'blue')
         })
