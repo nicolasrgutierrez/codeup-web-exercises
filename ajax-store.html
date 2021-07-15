@@ -26,16 +26,34 @@
 <script>
 (function() {
     "use strict";
+
+    function getData() {
+
+
     // : Create an AJAX GET request for the file under data/inventory.json
     $.get("data/inventory.json").done(function(data) {
         console.log(data);
+        // var html = "";
+        // $('#insertProducts').empty();
+        // data.forEach(function (tool) {
+        // html = '<tr>
+        //              <td>${tool.title}</td>
+        //              <td>${tool.quantity}</td>
+        //              <td>${tool.price}</td>
+        //              <td>${tool.categories}</td>
+        //         </tr>'
+        // $('#insertProducts').append(html);
+        // })
         var table = $('#insertProducts');
         for (var i = 0; i < data.length; i++) {
-            table.append("<tr><td>" + data[i].title + "<td>" + data[i].quantity + "</td>" + "<td>" + data[i].price + "</td>" + "<td>" + data[i].categories + "</td>" +"</td></tr>")
-        }
-    });
-
-
+            table.append("<tr><td>" + data[i].title + "<td>" + data[i].quantity + "</td>" + "<td>" + data[i].price + "</td>" + "<td>" + data[i].categories + "</td>" +"</td></tr>"
+            )}
+    }).fail(function(error) {
+        console.log("Error object; " + error);
+    })
+    setInterval(getData, 3000);
+    $('.refresh').click(getData)
+    }
     // : Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
