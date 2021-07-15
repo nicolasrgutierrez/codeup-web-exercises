@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Mapbox Map</title>
+</head>
+<body>
+
+<div id='map' style='width: 90vw; height: 90vh;'></div>
+<script src="./js/keys.js"></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
+<script>
+  mapboxgl.accessToken = mapboxAPIKey;
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v9',
+      zoom: 5,
+      center: [-81.5188, 28.3698]
+  });
+    geocode("1486 Buena Vista Dr, Lake Buena Vista, FL 32830",mapboxAPIKey).then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(16);
+    })
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-81.5188, 28.3698])
+        .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+        .setHTML("<img width='100px' height='100px' src='https://www.planethollywoodintl.com/wp-content/uploads/2016/10/observatory-menu-header_pasta.jpg' >")
+        .addTo(map)
+
+
+    marker.setPopup(popup)
+</script>
+</body>
+</html>
