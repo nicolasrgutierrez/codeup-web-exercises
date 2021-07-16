@@ -29,12 +29,39 @@
         .setLngLat([-81.5188, 28.3698])
         .addTo(map);
 
-    var popup = new mapboxgl.Popup()
-        .setHTML("<img width='100px' height='100px' src='https://www.planethollywoodintl.com/wp-content/uploads/2016/10/observatory-menu-header_pasta.jpg' >")
-        .addTo(map)
+    var phPopup = new mapboxgl.Popup()
+        .setHTML("<p>Planet Hollywood</p>")
+
+    marker.setPopup(phPopup)
 
 
-    marker.setPopup(popup)
+  //Big Lou's Pizza, Mi Familia, Rudy's BBQ
+var restaurants = [{
+        name: "Big Lou's Pizza",
+        address: "2048 S WW White Rd, San Antonio, TX 78222",
+},
+    {
+        name: "Mi Familia",
+        address: "18403 W I-10 West, San Antonio, TX 78257",
+  },
+    {
+        name: "Rudy's BBQ",
+        address: "24152 I-10, San Antonio, TX 78257",
+  }]
+
+  restaurants.forEach(function(restaurant){
+        geocode(restaurant.address, mapboxAPIKey).then(function(coordinates) {
+            var marker = new mapboxgl.Marker()
+                .setLngLat([coordinates])
+                .addTo(map);
+
+            var popup = new mapboxgl.Popup()
+                .setHTML("<p>" + restaurant.name + "</p>")
+
+            marker.setPopup(popup)
+        })
+  })
+
 </script>
 </body>
 </html>
