@@ -1,0 +1,9 @@
+
+.card {
+    width: 8em;
+}
+
+#forecast {
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
