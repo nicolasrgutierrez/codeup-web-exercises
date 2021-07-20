@@ -8,22 +8,25 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <title>Weather Map Project</title>
 </head>
-<body>
+<body style="background-color: aliceblue">
 <nav class="navbar">
   <a class="navbar-brand" style="color: #0950F0; font-weight: bolder">WeatherMap</a>
   <form class="form-inline">
-    <input class="form-control mr-sm-2" id="input" type="search" placeholder="Search by City" aria-label="Search">
-    <button id="btn" class="btn my-2 my-sm-0" type="submit">Search</button>
+    <input class="form-control" id="input" type="search" placeholder="Search by City" aria-label="Search">
+    <button id="btn" class="btn" type="submit">Search</button>
   </form>
 </nav>
 
 <div class="container-fluid">
-  <h1 id="main-header">5 Day Forecast<span></span></h1>
+  <h1 id="main-header">5-Day Forecast: <span id="location"></span></h1>
   <div class="row" id="forecast">
     <div class="card">
       <div id="day-1" class="card-header"></div>
       <div class="card-body">
-        <h4 id="highLow-1" class="card-title"></h4>
+        <div class="text-center">
+          <h4 id="highLow-1" class="card-title"></h4>
+          <img id="conditions-1" alt="Weather Conditions">
+        </div>
         <ul class="list-group">
           <li class="list-item" id="description-1"></li>
           <li class="list-item" id="humidity-1"></li>
@@ -35,7 +38,11 @@
     <div class="card">
       <div id="day-2" class="card-header"></div>
       <div class="card-body">
-        <h4 id="highLow-2" class="card-title"></h4>
+        <div class="text-center">
+          <h4 id="highLow-2" class="card-title"></h4>
+          <img id="conditions-2" alt="Weather Conditions">
+        </div>
+
         <ul class="list-group">
           <li class="list-item" id="description-2"></li>
           <li class="list-item" id="humidity-2"></li>
@@ -47,7 +54,10 @@
     <div class="card">
       <div id="day-3" class="card-header"></div>
       <div class="card-body">
-        <h4 id="highLow-3" class="card-title"></h4>
+        <div class="text-center">
+          <h4 id="highLow-3" class="card-title"></h4>
+          <img id="conditions-3" alt="Weather Conditions">
+        </div>
         <ul class="list-group">
           <li class="list-item" id="description-3"></li>
           <li class="list-item" id="humidity-3"></li>
@@ -59,7 +69,10 @@
     <div class="card">
       <div id="day-4" class="card-header"></div>
       <div class="card-body">
-        <h4 id="highLow-4" class="card-title"></h4>
+        <div class="text-center">
+          <h4 id="highLow-4" class="card-title"></h4>
+          <img id="conditions-4" alt="Weather Conditions">
+        </div>
         <ul class="list-group">
           <li class="list-item" id="description-4"></li>
           <li class="list-item" id="humidity-4"></li>
@@ -71,7 +84,10 @@
     <div class="card">
       <div id="day-5" class="card-header"></div>
       <div class="card-body">
-        <h4 id="highLow-5" class="card-title"></h4>
+        <div class="text-center">
+          <h4 id="highLow-5" class="card-title"></h4>
+          <img id="conditions-5" alt="Weather Conditions">
+        </div>
         <ul class="list-group">
           <li class="list-item" id="description-5"></li>
           <li class="list-item" id="humidity-5"></li>
