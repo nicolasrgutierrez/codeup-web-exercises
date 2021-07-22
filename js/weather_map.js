@@ -72,7 +72,7 @@ $(document).ready(function () {
                 lat: searchLat,
                 lon: searchLng
             }
-            console.log(userCoordinates)
+            //console.log(userCoordinates)
             $('#location').html(userSearch);
             forecast(userCoordinates);
             map.setCenter(userCoordinates);
