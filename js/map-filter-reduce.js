@@ -54,5 +54,18 @@ const totalYears = users.reduce((total, users) => {
 console.log(totalYears);
 
 const avgYears = users.reduce(function (users) {
-
+    let numberOfUsers = 5
+    return totalYears/numberOfUsers
 })
+console.log(avgYears);
+const longestEmail = users.reduce(function (currentLongestEmail, user) {
+
+    if (user.email.length > currentLongestEmail.length) {
+        return user.email.length
+    }else {
+        return currentLongestEmail
+    }
+},0);
+console.log(longestEmail);
+
+const nameString = users.reduce()
