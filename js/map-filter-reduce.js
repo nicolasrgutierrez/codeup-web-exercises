@@ -37,35 +37,62 @@ const users = [
         yearsOfExperience: 9
     }
 ];
-
+//
 const threeLanguageUsers = users.filter(function (user) {
     return user.languages.length >= 3
-})
+});
 console.log(threeLanguageUsers);
+//
 
+//
 const emailString = users.map(function (users) {
     return users.email
-})
+});
 console.log(emailString);
+//
 
+//
 const totalYears = users.reduce((total, users) => {
     return total + users.yearsOfExperience;
 }, 0);
 console.log(totalYears);
 
-const avgYears = users.reduce(function (users) {
-    let numberOfUsers = 5
-    return totalYears/numberOfUsers
-})
+const avgYears = totalYears / users.length;
 console.log(avgYears);
+//
+
+//
 const longestEmail = users.reduce(function (currentLongestEmail, user) {
 
-    if (user.email.length > currentLongestEmail.length) {
-        return user.email.length
+    if (user.email.length > currentLongestEmail.email.length) {
+        return user
     }else {
         return currentLongestEmail
     }
-},0);
+}, users[0]);
 console.log(longestEmail);
+//
 
-const nameString = users.reduce()
+//
+const nameString = users.reduce(function(accumulator, user) {
+    if(accumulator === '') {
+        return "Your instructors are: " + user.name
+    }else {
+        return accumulator + ', ' + user.name
+    }
+}, '');
+console.log(nameString + '.');
+
+
+//BONUS//
+const concatLangs = users.reduce(function (accumulator, user) {
+    return accumulator.concat(user.languages)
+}, []);
+console.log(concatLangs);
+let uniqueLangs = concatLangs.reduce(function (accumulator, currentValue) {
+    if (accumulator.indexOf(currentValue) === -1) {
+        accumulator.push(currentValue);
+    }
+    return accumulator
+}, [])
+console.log(uniqueLangs);
